@@ -10,9 +10,9 @@ const fetchBreedDescription = function (breedName, callback) {
 
     breed = data[0]
     if (breed) {
-      callback(breed["description"])
+      callback(error, breed["description"])
     } else {
-      callback(`Couldn't find that ${breedName} in the database`)
+      callback(`Couldn't find that breed, ${breedName}, in the database`)
     }
 
   });
